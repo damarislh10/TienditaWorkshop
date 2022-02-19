@@ -1,11 +1,14 @@
 import ListComponent from "../components/ListComponent";
 import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
 import DetailProduct from "../components/DetailProduct";
+import NavBarComponent from "../components/NavBarComponent";
+
 
 function AppRouter() {
   return (
     <div >
       <Router>
+      <NavBarComponent/>
         <Routes>
           <Route path="/" element={<ListComponent/>}/>
           <Route path='/product/:id' component={<DetailProduct/>}/>

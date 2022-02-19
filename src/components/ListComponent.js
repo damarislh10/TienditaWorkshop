@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
 import {Carousel} from 'react-bootstrap'
+import BannerComponent from './BannerComponent'
+
 
 const ListComponent = () => {
 
@@ -25,6 +27,7 @@ const ListComponent = () => {
 
   return (
     <div>
+      <BannerComponent/>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           {product.map((pr) =>(
