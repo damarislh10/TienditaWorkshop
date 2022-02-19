@@ -9,7 +9,7 @@ const ProductCard = ({ id, descuento, name, price, price2, image }) => {
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>
-          {price} <small>$39.9/kg</small>
+          {price} <small>{price2}</small>
         </Card.Title>
         <Card.Text>{name}</Card.Text>
         <Link to={`/product/${id}`}>
