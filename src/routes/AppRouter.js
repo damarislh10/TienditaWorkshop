@@ -9,6 +9,7 @@ function AppRouter() {
     <div >
       <Router>
       <NavBarComponent/>
+   
         <Routes>
           <Route path="/" element={<ListComponent/>}/>
           <Route path='/product/:id' element={<DetailProduct/>}/>
