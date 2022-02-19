@@ -31,17 +31,15 @@ const DetailProduct = () => {
   }
   return (
     <Modal.Dialog size="lg">
-      <Row>
-        <Col className='m-5 w-30'>
-          <img src={imageS} alt="img"/>
-        </Col>
-        <Col className='w-70'>
-          <Modal.Header closeButton>
-            <Modal.Title>{nombre}
-              <small>{priceS}</small>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
+      <Modal.Header closeButton>
+      </Modal.Header>
+      <Modal.Body>
+        <Row>
+          <Col className='m-5 w-30'>
+            <img src={imageS} alt="img"/>
+          </Col>
+          <Col className='w-70'>
+            <h2>{nombre}<small>{priceS}</small></h2>
             <small>Precio con IVA incluido</small>
             <p>Peso aproximado por pieza puede variar de acuerdo al peso real</p>
             <Form>
@@ -52,25 +50,23 @@ const DetailProduct = () => {
                 </Form.Select>
               </Form.Group>
             </Form>
-          </Modal.Body>
-          <Modal.Footer>
             <Row>
-              <Col className=''>
-                <div>
-                  <BsDash/>
+              <Col>
+                <BsDash/>
                   <small>250g</small>
-                  <BsPlus/>
-                </div>
+                <BsPlus/>
               </Col>
               <Col>
-                <Button variant="success">Agregar</Button>
+               <Button variant="success">Agregar</Button>  
               </Col>
-            </Row> 
-          </Modal.Footer>
-        </Col>  
-      </Row>
-      <h3>Productos relacionados</h3>
-      <ListComponent/>
+            </Row>    
+          </Col>
+        </Row>
+        <Row>
+          <h3>Productos relacionados</h3>
+          <ListComponent/>
+        </Row>
+      </Modal.Body>    
   </Modal.Dialog>
 
   )
