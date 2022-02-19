@@ -1,7 +1,8 @@
-import ListComponent from "../components/ListComponent";
 import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
 import DetailProduct from "../components/DetailProduct";
 import NavBarComponent from "../components/NavBarComponent";
+import Home from "../containers/home";
+
 
 
 function AppRouter() {
@@ -11,7 +12,7 @@ function AppRouter() {
       <NavBarComponent/>
    
         <Routes>
-          <Route path="/" element={<ListComponent/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path='/product/:id' element={<DetailProduct/>}/>
           <Route path="*" element={<Navigate to="/"/>}/>  
         </Routes>

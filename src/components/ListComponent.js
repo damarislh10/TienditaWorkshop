@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
-import BannerComponent from './BannerComponent'
 import { Row } from 'react-bootstrap'
 
 
@@ -24,8 +23,7 @@ const ListComponent = () => {
 
   return (
     <div>
-      <BannerComponent/>
-      <Row style={{ boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
+      <Row style={{width:"90%",margin: "5%", overflow:"auto", boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
             {product.map((pr) =>(
             <ProductCard key={pr.id}{...pr}/>
             ))}
