@@ -113,6 +113,7 @@ const DetailProduct = () => {
                           "productCard",
                           JSON.stringify(local)
                         );
+                        aletD()
                         JSON.parse(localStorage.getItem("productCard"));
                       }
                     });
