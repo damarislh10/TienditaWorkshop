@@ -38,7 +38,7 @@ const DetailProduct = () => {
         </Col>
         <Col className='w-70'>
           <Modal.Header closeButton>
-            <Modal.Title>{nombre}
+            <Modal.Title>{nombre}<br/>
               <small>{priceS}</small>
             </Modal.Title>
           </Modal.Header>
