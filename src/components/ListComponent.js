@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
- 
+import {Carousel} from 'react-bootstrap'
+
 const ListComponent = () => {
 
   const [product, setProduct] = useState([])
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     getData()
@@ -17,10 +19,17 @@ const ListComponent = () => {
     console.log(data)
     setProduct(data)
   }
-  
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
     <div>
-       <ProductCard/>
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <ProductCard/>
+        </Carousel.Item>
+      </Carousel>
     </div>
   )
 }
