@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button} from 'react-bootstrap'
 
-const ProductCard = ({id,name,price,image}) => {
+const ProductCard = ({id,name,price,price2,image}) => {
   return (
       <Card style={{ width: '18rem' }}>
         <small>32% dto.</small>
