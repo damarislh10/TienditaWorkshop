@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
-import {Carousel} from 'react-bootstrap'
+import {Carousel, Row} from 'react-bootstrap'
 import "../styles/DetailProduct.css";
 
 
@@ -27,12 +27,14 @@ const ListComponent = () => {
 
   return (
     <div>
-      <Carousel className='carrusel' activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          {product.map((pr) =>(
-          <ProductCard key={pr.id}{...pr}/>
-          ))}
-        </Carousel.Item>
+      <Carousel className='carrusel' activeIndex={index} onSelect={handleSelect}> 
+            <Carousel.Item>
+              <Row style={{ boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
+                  {product.map((pr) =>(
+                    <ProductCard key={pr.id}{...pr}/>
+                  ))}
+              </Row>
+            </Carousel.Item>
       </Carousel>
     </div>
   )
