@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import GetProductById from "../selectors/GetProductById";
 import { BsDash, BsPlus } from "react-icons/bs";
 import ListComponent from "./ListComponent";
@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 const DetailProduct = () => {
   const { id } = useParams();
   console.log(id);
+  const navige = useNavigate();
 
   let idS = 0;
   let nombre = "";
@@ -43,9 +44,11 @@ const DetailProduct = () => {
           <img src={imageS} alt="img" />
         </Col>
         <Col className="w-70">
-          <Modal.Header closeButton>
+          <Modal.Header closeButton onClick={() => {
+            navige("/");
+          }}>
             <Modal.Title>
-              {nombre}
+              {nombre} 
               <br />
               <small>{priceS}</small>
             </Modal.Title>
@@ -96,6 +99,8 @@ const DetailProduct = () => {
                 >
                   Agregar
                 </Button>
+              </Col>
+              <Col>
                 <Button
                   variant="danger"
                   onClick={() => {
@@ -113,6 +118,7 @@ const DetailProduct = () => {
                           "productCard",
                           JSON.stringify(local)
                         );
+                        aletD()
                         JSON.parse(localStorage.getItem("productCard"));
                       }
                     });
