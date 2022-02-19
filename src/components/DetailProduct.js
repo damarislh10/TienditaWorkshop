@@ -1,20 +1,35 @@
-<<<<<<< HEAD
-import React from "react";
-import { useParams } from "react-router-dom";
-import GetProductById from "../selectors/GetProductById";
-
-const DetailProduct = () => {
-  const { id } = useParams();
-=======
 import React from 'react'
 import { Button, Col, Form, Modal, Row } from 'react-bootstrap'
 import { useParams } from 'react-router-dom';
+import GetProductById from "../selectors/GetProductById";
 import {BsDash, BsPlus } from "react-icons/bs";
 import ListComponent from './ListComponent';
 
 const DetailProduct = () => {
   const { id } = useParams();
   console.log(id)
+
+  let idS = 0;
+  let nombre = "";
+  let descuentoS = "";
+  let imageS = "";
+  let priceS = "";
+  let price2S = "";
+  let product = GetProductById(id);
+
+  if (product !== undefined) {
+    console.log(product);
+    const { id, name, descuento, image, price, price2 } = product;
+    idS = id;
+    nombre = name;
+    descuentoS = descuento;
+    imageS = image;
+    priceS = price;
+    price2S = price2;
+  } else {
+    product = [];
+  }
+
   return (
     <Modal.Dialog size="lg">
       <Row>
@@ -61,33 +76,8 @@ const DetailProduct = () => {
 
   )
 }
->>>>>>> b5a30f038ce7b8651fb36d875656836c636d82bd
 
-  let idS = 0;
-  let nombre = "";
-  let descuentoS = "";
-  let imageS = "";
-  let priceS = "";
-  let price2S = "";
-  let product = GetProductById(id);
+ 
 
-  if (product !== undefined) {
-    console.log(product);
-    const { id, name, descuento, image, price, price2 } = product;
-    idS = id;
-    nombre = name;
-    descuentoS = descuento;
-    imageS = image;
-    priceS = price;
-    price2S = price2;
-  } else {
-    product = [];
-  }
-  return (
-    <div>
-
-    </div>
-  );
-};
 
 export default DetailProduct;
