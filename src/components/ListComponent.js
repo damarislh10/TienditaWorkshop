@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import ProductCard from '../components/productCard';
 
 const ListComponent = () => {
 
@@ -15,7 +16,7 @@ const ListComponent = () => {
   
   return (
     <div>
-      
+       <ProductCard/>
     </div>
   )
 }
