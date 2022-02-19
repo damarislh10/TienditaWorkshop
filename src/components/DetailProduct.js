@@ -32,6 +32,10 @@ const DetailProduct = () => {
   const alertaC = () => {
     Swal.fire("Good job!", "Producto añadido!", "success");
   };
+
+  const aletD = ()=>{
+    Swal.fire("Good job!", "Eliminado Producto!", "success");
+  }
   return (
     <Modal.Dialog size="lg">
       <Row>
@@ -91,6 +95,30 @@ const DetailProduct = () => {
                   variant="success"
                 >
                   Agregar
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    const local = JSON.parse(
+                      localStorage.getItem("productCard")
+                    );
+                    const buscado = local.find(
+                      (data) => data.id === Number(idS)
+                    );
+
+                    local.forEach((element, index) => {
+                      if (element.id === buscado.id) {
+                        local.splice(index, 1); // elimine
+                        localStorage.setItem(
+                          "productCard",
+                          JSON.stringify(local)
+                        );
+                        JSON.parse(localStorage.getItem("productCard"));
+                      }
+                    });
+                  }}
+                >
+                  Eliminar
                 </Button>
               </Col>
             </Row>
