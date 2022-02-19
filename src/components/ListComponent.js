@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
 import { Row } from 'react-bootstrap'
-
+import '../styles/ListComponent.css'
 
 
 const ListComponent = () => {
@@ -23,7 +23,7 @@ const ListComponent = () => {
 
   return (
     <div>
-      <Row style={{width:"90%",margin: "5%", overflow:"auto", boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
+      <Row className="row-card card__list" lg={6}>
             {product.map((pr) =>(
             <ProductCard key={pr.id}{...pr}/>
             ))}

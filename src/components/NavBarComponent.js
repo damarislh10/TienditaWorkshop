@@ -13,7 +13,7 @@ const NavBarComponent = () => {
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       /></Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Form.Select aria-label="Default select example">

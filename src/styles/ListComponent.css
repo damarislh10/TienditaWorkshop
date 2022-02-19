@@ -1,0 +1,7 @@
+.card__list{
+    width: 90%;
+    margin: 5%;
+    overflow: auto;
+    box-shadow: none;
+    flex-wrap: nowrap;
+}
