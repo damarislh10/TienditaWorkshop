@@ -23,7 +23,7 @@ const ListComponent = () => {
 
   return (
     <div>
-      <Row style={{ boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
+      <Row style={{width:"90%",margin: "5%", overflow:"auto", boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
             {product.map((pr) =>(
             <ProductCard key={pr.id}{...pr}/>
             ))}
