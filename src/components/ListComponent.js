@@ -27,7 +27,9 @@ const ListComponent = () => {
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
-          <ProductCard/>
+          {product.map((pr) =>(
+          <ProductCard key={pr.id}{...pr}/>
+          ))}
         </Carousel.Item>
       </Carousel>
     </div>
