@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import ProductCard from '../components/productCard';
-=======
 import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
->>>>>>> 6289a2e3b8a1db84c1593d6daf4bb1cd6e7f57e0
-
+import ProductCard from './ProductCard'
+ 
 const ListComponent = () => {
 
   const [product, setProduct] = useState([])
