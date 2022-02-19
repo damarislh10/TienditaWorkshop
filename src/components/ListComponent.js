@@ -14,6 +14,7 @@ const ListComponent = () => {
     const resp = await fetch(urlProduct);
     const data = await resp.json();
     console.log(data)
+    setProduct(data)
   }
   
   return (
