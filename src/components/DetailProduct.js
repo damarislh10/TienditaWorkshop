@@ -29,7 +29,6 @@ const DetailProduct = () => {
   } else {
     product = [];
   }
-
   return (
     <Modal.Dialog size="lg">
       <Row>
@@ -75,9 +74,6 @@ const DetailProduct = () => {
   </Modal.Dialog>
 
   )
-}
+};
 
- 
-
-
-export default DetailProduct;
+export default DetailProduct
