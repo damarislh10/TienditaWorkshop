@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
-import {Carousel} from 'react-bootstrap'
+import {Carousel, Row} from 'react-bootstrap'
 
 const ListComponent = () => {
 
@@ -19,19 +19,20 @@ const ListComponent = () => {
     console.log(data)
     setProduct(data)
   }
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  // const handleSelect = (selectedIndex, e) => {
+  //   setIndex(selectedIndex);
+  // };
 
   return (
     <div>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
+      {/* <Carousel activeIndex={index} onSelect={handleSelect}> */}
+        <Row style={{ boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
           {product.map((pr) =>(
           <ProductCard key={pr.id}{...pr}/>
           ))}
-        </Carousel.Item>
-      </Carousel>
+          </Row>
+      {/* </Carousel> */}
+      
     </div>
   )
 }

@@ -8,7 +8,7 @@ function AppRouter() {
       <Router>
         <Routes>
           <Route path="/" element={<ListComponent/>}/>
-          <Route path='/product/:id' component={<DetailProduct/>}/>
+          <Route path='/product/:id' element={<DetailProduct/>}/>
           <Route path="*" element={<Navigate to="/"/>}/>  
         </Routes>
       </Router>
