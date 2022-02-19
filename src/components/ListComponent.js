@@ -22,20 +22,13 @@ const ListComponent = () => {
     console.log(data)
     setProduct(data)
   }
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
 
   return (
-      <Carousel className='carrusel' activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
           <Row style={{ boxShadow: "none",flexWrap: "nowrap" }} className="row-card" lg={6}>
             {product.map((pr) =>(
             <ProductCard key={pr.id}{...pr}/>
             ))}
           </Row>
-        </Carousel.Item>
-      </Carousel>
   )
 }
 

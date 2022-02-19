@@ -34,12 +34,12 @@ const DetailProduct = () => {
     <Modal.Dialog size="lg">
       <Row>
         <Col className='m-5 w-30'>
-          <img src="https://res.cloudinary.com/ds5jsdvba/image/upload/v1645280933/Productos/Name_Limon_zm0did.svg"/>
+          <img src={imageS} alt="img"/>
         </Col>
         <Col className='w-70'>
           <Modal.Header closeButton>
-            <Modal.Title>Aguacate Hass
-              <small>$69.9/kg</small>
+            <Modal.Title>{nombre}
+              <small>{priceS}</small>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
