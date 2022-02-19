@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 import ProductCard from './ProductCard'
 import {Carousel} from 'react-bootstrap'
+import "../styles/DetailProduct.css";
+
 
 const ListComponent = () => {
 
@@ -25,7 +27,7 @@ const ListComponent = () => {
 
   return (
     <div>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel className='carrusel' activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           {product.map((pr) =>(
           <ProductCard key={pr.id}{...pr}/>
