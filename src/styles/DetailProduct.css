@@ -1,8 +1,46 @@
-.carrusel{
-    width: 90%;
-    background-color: brown;
+
+.footer__modal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+	gap: 5px;
+}
+.title__modal {
+    margin: 0% 5%;
 }
 
-.carrusel__item {
-   
+.colBtn__modal {
+    border: "none";
+    radius: 8px;
+    border: none;
+    margin: 2%;
+}
+.btn__green {
+    background-color: #0AC763;
+}
+.title__product {
+    margin: 4%;
+}
+@media (max-width: 375px) {
+    .footer__modal {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
+    .column__modal {
+        width: 100%;
+    }
+    .colBtn__modal {
+        width: 90%;
+    }
+    .ticket__modal {
+        width: 100%;
+        margin: 5% 30%;
+    }
+    .ticket__value {
+        padding: 2%;
+        margin: 5%;
+    }
+    .title__product {
+        text-align: center;
+    }
 }

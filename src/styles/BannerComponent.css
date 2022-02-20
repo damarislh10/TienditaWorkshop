@@ -1,13 +1,13 @@
-.card__body{
+.banner__body{
      width: 90vw;
      margin: 5% ;
      border: none;
 }
 
-.card__img {
+.banner__img {
     width: 100%;
 }
-.card__title {
+.banner__title {
     width: 90%;
     text-align: center;
     font-size: 180%;
@@ -18,21 +18,19 @@
 }
 
 @media (max-width: 375px) {
-    .Card__body{
+    .banner__body{
         margin: 5%;   
    }
 
-   .card__img {
+   .banner__img {
     height: 20vh;
     }
     
-    .card__title {
+    .banner__title {
     font-size: 100%;
     }
 }
 
 @media (max-width: 540px) {
-    .moviesGrid {
-        grid-template-columns: 100%;  
-    }
+    
 }

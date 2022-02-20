@@ -1,0 +1,55 @@
+.card__body{ 
+    width: 18rem; 
+    border: none;
+    /* height: 50vh; */
+}
+.card__ticket{
+    width: 59px;
+    height: 24px;
+    background: #F0E3FE;
+    border-radius: 16px;
+    color: #5E18BB;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+.card__price--primary {
+    width: 80%;
+    font-size:16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #332927;
+}
+.card__price--secundary{
+    color: #B8B4B4;
+    font-size:16px;
+    line-height: 24px;
+    font-weight: 700;
+} 
+.card__img {
+    width: 100%;
+}
+.btn__card {
+    background-color: #0AC763;
+    width: 90%;
+    radius: 8px;
+    border: none;
+}
+@media (max-width: 375px) {
+    .card__body{ 
+        width: 13rem;
+        height: 48vh;
+    } 
+    .card__price--primary {
+        width: 100%;
+        font-size:12px;
+    }
+    .card__price--secundary{
+        font-size:12px; 
+    } 
+    .card__img {
+        width: 50%;
+        margin: auto;
+    }
+}

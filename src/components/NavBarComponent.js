@@ -3,12 +3,15 @@ import { BsCart2 } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import '../styles/NavBarComponent.css'
+import ModuleComponent from './ModuleComponent';
+
 
 const NavBarComponent = () => {
 
   return (
-    <Navbar bg="light" expand="lg">
-  <Container>
+    <Navbar bg="white" expand="lg" className='nav__bar'>
+  <Container className='nav__bar'>
     <Navbar.Brand as={Link} to="/"><img
         src="https://res.cloudinary.com/ds5jsdvba/image/upload/v1645290637/Productos/Tiendita_bigjt4.svg"
         width="100"
@@ -18,17 +21,16 @@ const NavBarComponent = () => {
       /></Navbar.Brand>
     <Navbar aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
+      <Nav className="me-auto form__container">
+      <Button className='btn__bar' onClick={() => <ModuleComponent/>}>
       <FiMapPin style={{fontSize: "30px", margin: "2%", color: "#FC462D"}}/>
-        <Form.Select aria-label="Default select example" style={{float: "end"}}>
-        <option>México</option>
-        <option value="1"> México City Marriott Reforma Hotel</option>
-        <option value="2"> México City International Airport</option>
-        <option value="3"> México City Mexico</option>
-        </Form.Select>     
+        México City Marriott Reforma Hotel...
+      </Button>
       </Nav>
     </Navbar.Collapse>
-    <Button variant="success" style={{width: "6%", backgroundColor: "#0AC763", border: "none"}}><BsCart2 style={{fontSize: "22px"}}/></Button>
+    <Button variant="success" className='btn__car'>
+      <BsCart2 style={{fontSize: "22px"}}/>
+    </Button>
   </Container>
 </Navbar>
 

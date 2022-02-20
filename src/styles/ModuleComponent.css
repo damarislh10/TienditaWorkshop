@@ -1,0 +1,16 @@
+.btn__modal {
+    width: 90%;
+    background-color: #0AC763;
+    border: "none";
+    radius: 8px;
+    border: none;
+    margin: 5%;
+}
+
+.modal__option {
+    width: 100%;
+    position: relative;
+    position: absolute;
+    margin-left: 3px;
+    padding-left: 56px;
+}

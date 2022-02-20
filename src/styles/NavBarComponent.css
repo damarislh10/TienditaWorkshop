@@ -1,0 +1,29 @@
+.nav__bar {
+    width: 100vw;
+}
+.form__container{
+ margin-left: 750px;
+ width: 30vw;
+}
+.btn__bar {
+    background-color: white;
+    width: 100%;
+    color: #332927;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 12px;
+}
+.btn__bar:hover {
+    background-color: white !important;
+    color: #332927;
+    border: none;
+}
+.btn__car{
+    width: 16%; 
+    background-color: #0AC763;
+    border: "none";
+    radius: 8px;
+    border: none;
+}

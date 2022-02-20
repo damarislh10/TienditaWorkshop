@@ -6,6 +6,7 @@ const Home = () => {
   return (
       <div>
     <BannerComponent/>
+    <h2 style={{ margin: "5%"}}>Ofertas</h2>
     <ListComponent/>
     </div>
   )
