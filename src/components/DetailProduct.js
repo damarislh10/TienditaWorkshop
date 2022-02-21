@@ -11,15 +11,12 @@ import '../styles/DetailProduct.css'
 
 const DetailProduct = () => {
   const { id } = useParams();
-  console.log(id);
   const navige = useNavigate();
   
   let idS = 0;
   let nombre = "";
-  let descuentoS = "";
   let imageS = "";
   let priceS = "";
-  let price2S = "";
   let product = GetProductById(id);
 
   if (product !== undefined) {

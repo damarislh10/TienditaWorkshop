@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsCart2 } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
-import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap'
+import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/NavBarComponent.css'
 import ModuleComponent from './ModuleComponent';

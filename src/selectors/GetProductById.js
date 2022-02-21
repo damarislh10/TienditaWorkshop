@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { urlProduct } from '../helpers/url'
 
 const GetProductById = (id1) => {
 
     const [product, setProduct] = useState([])
-    console.log(id1)
+
     useEffect(() => {
         getData()
     }, [])
